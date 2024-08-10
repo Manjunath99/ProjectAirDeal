@@ -168,10 +168,12 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
+// this method will extract the text from image and send that to next page
   Future<void> _extractTextFromImage(
       BuildContext context, File imageFile) async {
+
     try {
+      //google ml kit
       final textRecognizer =
       TextRecognizer(script: TextRecognitionScript.latin);
       final inputImage = InputImage.fromFile(imageFile);
