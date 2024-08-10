@@ -12,6 +12,9 @@ import 'package:textrecogn/widgets/floatingactionbutton.dart';
 
 // i used a provider state management for the application to run
 // using of multiprovider,ChangeNotifierProvider,and consumer
+//used google_ml_kit for text recognize
+
+
 void main() {
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => CardDetailProvider()),
@@ -123,6 +126,7 @@ class HomeScreen extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: width / 22, color: Colors.black),
                           ),
+                          //this buttomn will help to edit already existing card details in shared preference
                           trailing: InkWell(
                               onTap: () {
                                 Navigator.push(

@@ -4,6 +4,9 @@ import 'package:textrecogn/models/Card_details.dart';
 import 'package:textrecogn/provider/card_provider.dart';
 import 'package:textrecogn/widgets/buttons.dart';
 
+
+//this page will help in edit already existed card details in shared preference
+
 class EditDetails extends StatefulWidget {
   final CardDetail? cardDetail;
 
