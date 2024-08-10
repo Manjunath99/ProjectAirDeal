@@ -1,3 +1,4 @@
+//this is the class for card details model
 class CardDetail {
   final String? name;
   final String? phoneNumber;

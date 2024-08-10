@@ -5,12 +5,15 @@ import 'dart:convert';
 import 'package:textrecogn/models/Card_details.dart';
 import 'package:provider/provider.dart';
 
+
+//here i used provider package for updating the state
 class CardDetailProvider extends ChangeNotifier {
 
   List<CardDetail> _cardDetails = [];
 
   List<CardDetail> get cardDetails => _cardDetails;
 
+  // for getting all the card details
   Future<void> loadCardDetails() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String? cardDetailsJson = prefs.getString('card_details');
@@ -21,6 +24,9 @@ class CardDetailProvider extends ChangeNotifier {
     }
   }
 
+  // for saving  the card details
+
+
   Future<void> saveCardDetails(List<CardDetail> cardDetails) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     List<Map<String, dynamic>> jsonList = cardDetails.map((card) => card.toJson()).toList();
@@ -29,6 +35,8 @@ class CardDetailProvider extends ChangeNotifier {
     _cardDetails = cardDetails;
     notifyListeners();
   }
+  // for deleting all the card details
+
 
   Future<void> deleteCardDetails() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
